@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/saludo/:nombre', (req, res) => {
+    //Línea para generar cambios para el commit
     res.send(`Hola, ${req.params.nombre}!`);
 });
 
