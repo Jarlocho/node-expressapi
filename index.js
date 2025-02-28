@@ -10,11 +10,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/saludo/:nombre', (req, res) => {
-    //Línea para generar cambios para el commit
+    //Línea para generar cambios para el commit del segundo integrante
     res.send(`Hola, ${req.params.nombre}!`);
 });
 
 app.post('/mensaje', (req, res) => {
+    //Línea para generar cambios para el commit del tercer integrante
     res.json({ mensaje: `Recibido: ${req.body.mensaje}` });
 });
 
