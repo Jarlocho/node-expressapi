@@ -5,6 +5,7 @@ const port = 3000;
 app.use(express.json());
 
 app.get('/', (req, res) => {
+    console.log("Endpoint raíz implementado"); // <-- Línea nueva
     res.send('Bienvenido a la API');
 });
 
