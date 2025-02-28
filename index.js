@@ -1,0 +1,24 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+
+app.get('/', (req, res) => {
+    console.log("Endpoint raíz implementado"); // <-- Línea nueva
+    res.send('Bienvenido a la API');
+});
+
+app.get('/saludo/:nombre', (req, res) => {
+    //Línea para generar cambios para el commit del segundo integrante
+    res.send(`Hola, ${req.params.nombre}!`);
+});
+
+app.post('/mensaje', (req, res) => {
+    //Línea para generar cambios para el commit del tercer integrante
+    res.json({ mensaje: `Recibido: ${req.body.mensaje}` });
+});
+
+app.listen(port, () => {
+    console.log(`Servidor escuchando en http://localhost:${port}`);
+});
